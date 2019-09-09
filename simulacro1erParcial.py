@@ -35,14 +35,14 @@ def BusquedaMayorTmp(m):
     print("durante el/la ", periodos[fMayor])
     
 
-temperaturas= [[0] * 7] * 4
+temperaturas= [[0] * 7 for i in range(4)]
 
 for i in range(0,4):
     for j in range(0,7):
         temperaturas[i][j]= random.randint(0,40)
 
-#print(temperaturas)
-#BusquedaMayorTmp(temperaturas)
+print(temperaturas)
+BusquedaMayorTmp(temperaturas)
 
 #Ej 3
 class Alumno:
@@ -66,8 +66,11 @@ def InformeAlumnos(alumnos):
         if alumnos[i].edad < 21:
             contador = contador + 1
             acumulador= acumulador + alumnos[i].materias
-    
-    print("Promedio: ", acumulador/contador)
+
+    if contador == 0:
+        print("Promedio: 0")
+    else:
+        print("Promedio: ", acumulador/contador)
     
     contador = 0
     acumulador = 0
@@ -76,7 +79,10 @@ def InformeAlumnos(alumnos):
             contador = contador + 1
             acumulador = acumulador + alumnos[i].edad
     
-    print("Promedio edad: ", acumulador/contador)
+    if contador == 0:
+        print("Promedio edad: 0")
+    else:
+        print("Promedio edad: ", acumulador/contador)
     print("Cantidad: ", contador)
   
   
