@@ -1,0 +1,8 @@
+10 - Depto 10: 90
+9 - Depto 9: 95
+1 - Depto 1: 100
+8 - Depto 8: 100
+3 - Depto 3: 110
+2 - Depto 2: 120
+6 - Depto 6: 120
+5 - Depto 5: 130
