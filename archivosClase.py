@@ -32,7 +32,7 @@ with open('miArchivo.txt', 'r', encoding='utf-8') as arch:
 
 with open('miArchivo.txt', 'r', encoding='utf-8') as arch:
     for linea in arch:
-        print(linea)
+        print(linea.replace('\n', ''))
 
 lista= []
 #with open('miArchivo.txt', 'r', encoding='utf-8') as arch:
