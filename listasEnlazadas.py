@@ -21,9 +21,30 @@ class ListaEnlazada:
         self.primero = segundo
         self.longitud -= 1
     def AgregarAlFinal(self, dato):
-        
+        nodo = Nodo(dato, None)
+        if self.longitud == 0:
+            self.primero = nodo
+            self.longitud += 1
+        else:
+            actual= self.primero
+            for i in range(0, self.longitud - 1):
+                actual = actual.prox
+            ultimo = actual
+            ultimo.prox = nodo
+            self.longitud += 1
+
+
     def RemoverDelFinal(self):
-    
+        if self.longitud <= 1:
+            self.primero = None
+            self.longitud = 0
+        else:
+            actual= self.primero
+            for i in range(0, self.longitud - 2):
+                actual = actual.prox
+            actual.prox= None
+            self.longitud -= 1
+
     def Imprimir(self):
         nodo = self.primero
         while nodo:
@@ -63,4 +84,8 @@ print("----------------------")
 
 print("----------------------")
 
-
+lst.AgregarAlFinal("N4")
+lst.Imprimir()
+print("----------------------")
+lst.RemoverDelFinal()
+lst.Imprimir()
