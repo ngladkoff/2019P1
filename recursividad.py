@@ -1,5 +1,17 @@
 # Recursividad
 
+# Cuenta Regresiva
+def cuenta_regresiva(nro):
+    nro -= 1
+    if nro > 0:
+        print(nro)
+        cuenta_regresiva(nro)
+    else:
+        print("Fin")
+
+cuenta_regresiva(5)
+
+
 # Factorial
 def fact(n):
     cuenta= 1
@@ -30,7 +42,8 @@ for i in range(0,11):
     print(fibonacci(i), end= " ")
     
 print("")
-    
+
+# Hanoi    
 def moverTorre(altura, a, b, c):
     if altura == 0:
         return    

@@ -10,10 +10,11 @@ class Alumno:
 
 listaAlumnos = []
 
-with open('progra1.csv', 'r', encoding='ansi') as arch:
+with open('BBDD1.csv', 'r', encoding='ansi') as arch:
     for linea in arch:
-        al= linea.split(';')        
-        listaAlumnos.append(Alumno(int(al[1]), al[0]))
+        al= linea.split(';')
+        if al[0] != '':
+            listaAlumnos.append(Alumno(int(al[1].replace('\n', '')), al[0]))
 
 while (True):
     idx = random.randint(0, len(listaAlumnos) - 1)
